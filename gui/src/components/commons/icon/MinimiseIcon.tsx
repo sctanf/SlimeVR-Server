@@ -7,7 +7,7 @@ export function MinimiseIcon({ className }: { className?: string }) {
       viewBox="0 0 31 29"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M20.5 15.5H10.5" stroke="#C0A1D8" strokeLinecap="round" />
+      <path d="M20.5 15.5H10.5" stroke="#1C9AC9" strokeLinecap="round" />
     </svg>
   );
 }

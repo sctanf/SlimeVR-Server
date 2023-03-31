@@ -69,7 +69,7 @@ export function Dropdown({
               onKeyDown={(ev) => a11yClick(ev) && setOpen((open) => !open)}
               tabIndex={0}
             >
-              <div className="flex-grow">
+              <div className="flex-grow text-background-10">
                 {items.find((i) => i.value == value)?.label || placeholder}
               </div>
               <div
@@ -109,11 +109,11 @@ export function Dropdown({
                   alignment === 'left' && 'left-0'
                 )}
               >
-                <ul className="py-1 text-sm text-gray-200 flex flex-col pr-2">
+                <ul className="py-1 text-sm text-background-20 flex flex-col pr-2">
                   {items.map((item) => (
                     <li
                       className={classNames(
-                        'py-2 px-4 hover:text-white min-w-max cursor-pointer',
+                        'py-2 px-4 hover:text-background-10 min-w-max cursor-pointer',
                         variant == 'primary' && 'hover:bg-background-50',
                         variant == 'secondary' && 'hover:bg-background-60'
                       )}

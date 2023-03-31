@@ -4,22 +4,24 @@ const rem = (pt) => `${pt / 16}rem`;
 
 const colors = {
   'blue-gray': {
-    100: '#ffffff',
-    200: '#78A4C6',
-    300: '#608AAB',
-    400: '#3D6381',
-    500: '#1A3D59',
-    600: '#112D43',
-    700: '#081E30',
-    800: '#00101C',
+    100: '#4D222B', // Dark text
+    200: '#1A6682', // Some lighter-ish text
+    300: '#095470', // Light-ish text
+    400: '#4F9FBD', // Button hover in some places
+    500: '#EEEEEE', // Darker trans white tracker list background
+    600: '#FFFFFF', // Trans white tracker list background and some buttons
+    700: '#F5A9B8', // Trans pink home background
+    800: '#5BCEFA', // Trans blue trans outer background
     900: '#000509',
   },
   purple: {
-    100: '#BB8AE5',
-    200: '#9D5CD4',
-    500: '#65459A',
-    700: '#623B83',
-    900: '#2E2145',
+    100: '#B53A52', // Accent text
+    200: '#FCCAD4', // Lighter trans pink button
+    300: '#F7B7C4', // Somewhat lighter trans pink button
+    400: '#F7B7C4', // Somewhat lighter trans pink button
+    500: '#F5A9B8', // Trans pink buttons
+    700: '#FA91A6', // Darker trans pink button
+    900: '#F77C94', // Even darker trans pink home bottom
   },
 };
 
@@ -36,8 +38,8 @@ module.exports = {
     extend: {
       colors: {
         status: {
-          success: '#50E897',
-          warning: '#D8CD37',
+          success: '#44C27F',
+          warning: '#F0DD3A',
           critical: '#DF6D8C',
           special: '#A44FED',
         },
@@ -64,7 +66,7 @@ module.exports = {
         DEFAULT: 500,
       },
       color: {
-        DEFAULT: '#ffffff',
+        DEFAULT: '#1D1D1D',
       },
     },
   },
