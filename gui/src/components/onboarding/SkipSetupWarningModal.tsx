@@ -4,6 +4,7 @@ import { Localized, useLocalization } from '@fluent/react';
 import { BaseModal } from '@/components/commons/BaseModal';
 import ReactModal from 'react-modal';
 import { useNavigate } from 'react-router-dom';
+import { useConfig } from '@/hooks/config';
 
 export function SkipSetupWarningModal({
   isOpen = true,
@@ -26,6 +27,7 @@ export function SkipSetupWarningModal({
 } & ReactModal.Props) {
   const { l10n } = useLocalization();
   const navigate = useNavigate();
+  const { config } = useConfig();
 
   // isOpen is checked by checking if the parent modal is opened + our bodyPart is the
   // neck and we havent showed this warning yet
@@ -43,7 +45,7 @@ export function SkipSetupWarningModal({
           <Localized id="onboarding-setup_warning" elems={{ b: <b></b> }}>
             <WarningBox>
               <b>Warning:</b> The setup is needed for good tracking, this is
-              required if this is your first time using SlimeVR.
+              required if this is your first time using {config?.theme == "snep" ? "SnepVR" : "SlimeVR"}.
             </WarningBox>
           </Localized>
 

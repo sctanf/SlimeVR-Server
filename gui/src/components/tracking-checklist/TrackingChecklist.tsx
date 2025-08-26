@@ -24,6 +24,7 @@ import { ArrowDownIcon } from '@/components/commons/icon/ArrowIcons';
 import { Localized } from '@fluent/react';
 import { WrenchIcon } from '@/components/commons/icon/WrenchIcons';
 import { TrackingChecklistModal } from './TrackingChecklistModal';
+import { useConfig } from '@/hooks/config';
 
 function Step({
   step: { status, id, optional, firstRequired },
@@ -336,6 +337,8 @@ export function TrackingChecklist({
   const settingsOpenState = useState(false);
   const [, setSettingsOpen] = settingsOpenState;
 
+  const { config } = useConfig();
+
   return (
     <>
       <div
@@ -411,7 +414,7 @@ export function TrackingChecklist({
             <div className={'flex flex-col justify-center'}>
               {completion === 'incomplete' && (
                 <Typography variant="section-title">
-                  You are not prepared to use SlimeVR!
+                  You are not prepared to use {config?.theme == "snep" ? "SnepVR" : "SlimeVR"}!
                 </Typography>
               )}
               {completion === 'partial' && (
@@ -421,7 +424,7 @@ export function TrackingChecklist({
               )}
               {completion == 'complete' && (
                 <Typography variant="section-title">
-                  You are prepared to use SlimeVR!
+                  You are prepared to use {config?.theme == "snep" ? "SnepVR" : "SlimeVR"}!
                 </Typography>
               )}
             </div>

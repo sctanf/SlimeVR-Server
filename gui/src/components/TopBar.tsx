@@ -176,7 +176,7 @@ export function TopBar({
                   className={classNames('flex justify-around flex-col')}
                   data-tauri-drag-region
                 >
-                  <Typography>SlimeVR</Typography>
+                  <Typography>{config?.theme == "snep" ? "SnepVR" : "SlimeVR"}</Typography>
                 </div>
               )}
               {(!(isMobile && !config?.decorations) || showVersionMobile) && (
@@ -241,7 +241,7 @@ export function TopBar({
                   className="flex justify-around flex-col xs:hidden"
                   data-tauri-drag-region
                 >
-                  <Typography variant="section-title">SlimeVR</Typography>
+                  <Typography variant="section-title">{config?.theme == "snep" ? "SnepVR" : "SlimeVR"}</Typography>
                 </div>
               </div>
             )}
